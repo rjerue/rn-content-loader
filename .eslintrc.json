@@ -1,0 +1,32 @@
+{
+  "extends": ["airbnb", "plugin:monorepo/recommended"],
+  "plugins": ["jest"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 8,
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "settings": {
+    "import/parser": "babel-eslint"
+  },
+  "rules": {
+    "monorepo/no-internal-import": [0],
+    "comma-dangle": ["error", "always-multiline"],
+    "semi": ["error", "never"],
+    "react/prop-types": [0],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prefer-stateless-function": [0],
+    "react/no-did-mount-set-state": [0],
+    "arrow-parens": [0],
+    "import/no-unresolved": [2, { "ignore": ["common.*", "react-native"] }],
+    "import/extensions": [0]
+  },
+  "env": {
+    "jest/globals": true,
+    "browser": true
+  }
+}
